@@ -78,7 +78,7 @@ Type instruction or "quit".
 
 ## Agent Graph
 
-![LangGraph Agent Graph](agent_graph.png)
+![LangGraph Agent Graph](others/agent_graph.png)
 
 The diagram above shows the flow of the LangGraph agent:
 - The process starts at the `llm` node, where the language model interprets user input.

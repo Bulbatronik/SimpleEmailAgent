@@ -6,9 +6,11 @@ from langgraph.graph import StateGraph, START, END
 from llm_agent import ChatState, llm_node
 from email_tools import list_unread_email
 
+
 def router(state):
     last_message = state['messages'][-1]
     return 'tools' if getattr(last_message, 'tool_calls', None) else 'end'
+
 
 def build_graph(llm, summarize_email):
     tool_node = ToolNode([list_unread_email, summarize_email])
