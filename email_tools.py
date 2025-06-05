@@ -6,10 +6,12 @@ from imap_tools import MailBox, AND
 from langchain.tools import tool
 from config import IMAP_HOST, IMAP_USER, IMAP_PASSWORD, IMAP_FOLDER
 
+
 def connect():
     mail_box = MailBox(IMAP_HOST)
     mail_box.login(IMAP_USER, IMAP_PASSWORD, initial_folder=IMAP_FOLDER)
     return mail_box
+
 
 @tool   
 def list_unread_email():
@@ -34,6 +36,7 @@ def list_unread_email():
     ], indent=2, ensure_ascii=False)
     print(f"Found {len(unread_emails)} unread emails.")
     return response
+
 
 def summarize_email_factory(raw_llm):
     @tool
