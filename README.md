@@ -46,7 +46,7 @@ A modular, CLI-based AI email assistant that connects to your IMAP inbox, lists 
      ```
 
 5. **Configure your environment:**
-   - Copy `.env.example` to `.env` (or create `.env`):
+   - Create`.env` file and fill it for your email:
      ```env
      IMAP_HOST='imap.example.com'
      IMAP_USER='your_username'
