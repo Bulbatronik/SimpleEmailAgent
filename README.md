@@ -14,13 +14,14 @@ A modular, CLI-based AI email assistant that connects to your IMAP inbox, lists 
 - **[Ollama](https://ollama.com/)** (for running local LLMs)
 - **IMAP email account** (credentials required)
 - **uv** (for fast Python package management and running)
+- **Compatible GPU** (NVIDIA GeForce RTX 4070 in my case)
 
 ## Installation
 
 1. **Clone the repository:**
    ```bash
-   git clone <your-repo-url>
-   cd LocalAgent
+   git clone https://github.com/Bulbatronik/SimpleEmailAgent.git
+   cd SimpleEmailAgent
    ```
 
 2. **Install [uv](https://github.com/astral-sh/uv):**
@@ -39,7 +40,7 @@ A modular, CLI-based AI email assistant that connects to your IMAP inbox, lists 
      ```bash
      ollama serve
      ```
-   - Pull the required model (e.g., Qwen3 8B):
+   - Pull the required model (e.g., Qwen3 8B, but depends on your GPU memory):
      ```bash
      ollama pull qwen3:8b
      ```
